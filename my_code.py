@@ -21,4 +21,7 @@ def test_fix_phone_num_handles_nonstandard_formats():
     
 def test_fix_phone_num_raises_valueerror():
     with pytest.raises(ValueError):
-        fix_phone_num("abcde12345")  # Non-digit characters
+        fix_phone_num("abcde12345")  
+        
+    with pytest.raises(ValueError):
+        fix_phone_num("123-ABC-7890")
