@@ -1,6 +1,8 @@
 import pytest
 
 def fix_phone_num(phone_num_to_fix):
+  if len(cleaned_phone_num) != 10:
+    raise ValueError("Phone number must contain exactly 10 digits.")
   # given "5125558823". Split the parts, then recombine and return
   area_code = phone_num_to_fix[0:3] # 512 (first three digits)
   three_part = phone_num_to_fix[3:6] # 555 (next three digits)
